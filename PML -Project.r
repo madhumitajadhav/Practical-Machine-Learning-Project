@@ -73,3 +73,49 @@ predictionsB21
 predictionsC21
 # 1  2  3  4 51  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 
 # B  A  B  A  A  E  D  B  A  A  B  C  B  A  E  E  A  B  B  B 
+
+
+-------------------------------------------------------------------
+## Out Of sample Error For Decision Tree
+outOfSampleError.accuracy <- sum(predictionsA11 == myTesting1$classe)/length(predictionsA11)
+outOfSampleError.accuracy
+
+# out of sample error and percentage of out of sample error
+outOfSampleError <- 1 - outOfSampleError.accuracy
+outOfSampleError
+
+e <- outOfSampleError * 100
+paste0("Out of sample error estimation: ", round(e, digits = 2), "%")
+-------------------------------------------------------------------
+## Out Of sample Error For Random Forest
+outOfSampleError.accuracy <- sum(predictionsB11 == myTesting1$classe)/length(predictionsB11)
+outOfSampleError.accuracy
+
+# out of sample error and percentage of out of sample error
+outOfSampleError <- 1 - outOfSampleError.accuracy
+outOfSampleError
+
+e <- outOfSampleError * 100
+paste0("Out of sample error estimation: ", round(e, digits = 2), "%")
+-------------------------------------------------------------------
+
+## Out Of sample Error For SVM
+outOfSampleError.accuracy <- sum(predictionsC11 == myTesting1$classe)/length(predictionsC11)
+outOfSampleError.accuracy
+
+# out of sample error and percentage of out of sample error
+outOfSampleError <- 1 - outOfSampleError.accuracy
+outOfSampleError
+
+e <- outOfSampleError * 100
+paste0("Out of sample error estimation: ", round(e, digits = 2), "%")
+#-------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
